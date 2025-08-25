@@ -12,7 +12,7 @@ input_file = 's3://myemrbucket13/inputfolder/product_data.csv'
 df = spark.read.option("header", "true").csv(input_file)
 
 
-print(df.show())
+df.show()
 
 
 
