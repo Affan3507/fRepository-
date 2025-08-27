@@ -17,8 +17,12 @@ df.show()
 
 
 
-# Write DataFrame as Parquet to the output folder
+# Write DataFrame as Parquet to the output folder - cloud
 df.write.option("header", "true").mode("overwrite").parquet("s3://myemrbucket13/outputfolder")
+
+# Write DataFrame as Parquet to the output folder - local
+df.write.option("header", "true").mode("overwrite").parquet("file:///C:/xyz")
+
 
 # Stop the SparkSession
 spark.stop()
